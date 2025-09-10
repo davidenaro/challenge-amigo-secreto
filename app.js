@@ -29,6 +29,11 @@ function ActualizarListaAmigos(){
 
 }
 
+function LimpiarLista(){
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML ="";
+}
+
 function sortearAmigo() {
     
     console.log(amigos.length);
@@ -38,8 +43,9 @@ function sortearAmigo() {
         let numeroSorteado = Math.floor(Math.random()*amigos.length)+1;
 
         console.log(numeroSorteado);
+        LimpiarLista();
         let amigosecreto = document.getElementById('resultado');
-        amigosecreto.innerHTML =amigos[numeroSorteado-1];
+        amigosecreto.innerHTML ='El amigo secreto sorteado es: '+amigos[numeroSorteado-1];
 
     }
 }
